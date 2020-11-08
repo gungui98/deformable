@@ -66,6 +66,8 @@
 #ifndef MODULATED_DEFORM_CONV_KERNEL_CUH
 #define MODULATED_DEFORM_CONV_KERNEL_CUH
 
+#include "pytorch_cuda_helper.hpp"
+
 template <typename T>
 __device__ T dmcn_im2col_bilinear(const T *input, const int data_width,
                                   const int height, const int width, T h, T w) {
